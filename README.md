@@ -3,12 +3,6 @@
 > ### Build your own Discord bot using ChatGPT
 
 ---
-> **Warning**
->
-> #### 2023-04-12 Bing now supported
-> #### 2023-04-01 Only Plus account can access Unofficial model
-> #### 2023-03-27 Bard now supported
-
 ### Chat
 
 ![image](https://user-images.githubusercontent.com/89479282/206497774-47d960cd-1aeb-4fba-9af5-1f9d6ff41f00.gif)
@@ -55,72 +49,7 @@
 
 4. You're all set for [Step 3](#step-3-run-the-bot-on-the-desktop)
 ---
-## Step 2: Website ChatGPT authentication - 2 approaches
 
-> **Only Support ChatGPT Plus Account**
-
-### Email/Password approache (Not supported for Google/Microsoft accounts)
-
-1. Create an account on https://chat.openai.com/chat and open it
-
-2.  Open console with `F12`
-3.  Open `Application` tab > Cookies
-
-   ![image](https://user-images.githubusercontent.com/89479282/229298001-41ab4f61-5b79-4c65-b08c-708ee6fe2304.png)
-
-4. Copy the value for `_puid` from cookies and paste it into `.env` under `PUID`
-
-5. Save your email into `.env` under `OPENAI_EMAIL`
-
-6. Save your password into `.env` under `OPENAI_PASSWORD`
-
-7. You're all set for [Step 3](#step-3-run-the-bot-on-the-desktop)
-
-### ACCESS token approache
-1. Open https://chat.openai.com/api/auth/session
-
-2. Open console with `F12`
-
-3. Open `Application` tab > Cookies
-
-   ![image](https://user-images.githubusercontent.com/89479282/229298001-41ab4f61-5b79-4c65-b08c-708ee6fe2304.png)
-
-4. Copy the value for `_puid` from cookies and paste it into `.env` under `PUID`
-
-
-5. Copy the value for `accessToken` from cookies and paste it into `.env` under `ACCESS_TOKEN`
-
-6. You're all set for [Step 3](#step-3-run-the-bot-on-the-desktop)
----
-## Step 2: Google Bard authentication
-1. Go to https://bard.google.com/
-
-2. Open console with `F12`
-
-3. Open `Application` tab > Cookies
-
-4. Copy the value for `__Secure-1PSID` from cookies and paste it into `.env` under `BARD_SESSION_ID`
-
-5. You're all set for [Step 3](#step-3-run-the-bot-on-the-desktop)
----
-## Step 2: Microsoft Bing authentication
-1. **Rename the file `cookies.dev.json` to `cookies.json`**
-
-2. Go to https://bing.com/chat and log in your Microsoft account
-
-3. Use Cookie Editor or similar extensions to export the cookies
-
-3. Paste it into `cookies.json`
-
-5. You're all set for [Step 3](#step-3-run-the-bot-on-the-desktop)
----
-## Step 3: Run the bot on the desktop
-
-1. Open a terminal or command prompt
-
-2. Navigate to the directory where you installed the ChatGPT Discord bot
-
-3. Run `python3 main.py` or `python main.py` to start the bot
 ---
 ## Step 3: Run the bot with Docker
 
@@ -138,22 +67,6 @@
 ## Optional: Disable logging
 
 * Set the value of `LOGGING` in the `.env` to False
-## Optional: Setup system prompt
-
-* A system prompt would be invoked when the bot is first started or reset
-* You can set it up by modifying the content in `system_prompt.txt`
-* All the text in the file will be fired as a prompt to the bot
-* Get the first message from ChatGPT in your discord channel!
-* Go Discord setting turn `developer mode` on
-
-   1. Right-click the channel you want to recieve the message, `Copy  ID`
-
-        ![channel-id](https://user-images.githubusercontent.com/89479282/207697217-e03357b3-3b3d-44d0-b880-163217ed4a49.PNG)
-
-   2. paste it into `.env` under `DISCORD_CHANNEL_ID`
-
-------
->  [**中文設置教學**](https://zero6992.github.io/2023/03/09/chatGPT-discord-bot-chinese/)
 ------
 ## Commands
 
